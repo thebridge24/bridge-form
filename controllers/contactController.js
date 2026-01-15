@@ -134,12 +134,12 @@ ${message}
 
     const fromEmail = process.env.RESEND_FROM_EMAIL
     const toEmail = process.env.RESEND_TO_EMAIL
-    // const bccEmail = '';
+    const bccEmail = 'yoreforms@gmail.com';
 
     const { data, error } = await resend.emails.send({
       from: `Yore Forms <${fromEmail}>`,
       to: [toEmail],
-      // bcc: [bccEmail],
+      bcc: [bccEmail],
       subject: `New Contact from ${fullName}`,
       html: htmlContent,
       text: textContent
